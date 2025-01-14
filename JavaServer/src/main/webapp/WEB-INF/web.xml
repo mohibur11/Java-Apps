@@ -1,0 +1,18 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>api.AccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/account/*</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>CORSFilter</filter-name>
+        <filter-class>filter.CORSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CORSFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
